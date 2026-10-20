@@ -3,7 +3,7 @@
 
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](pyproject.toml)
 [![CI](https://github.com/denisecase/nlp-01-getting-started/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/denisecase/nlp-01-getting-started/actions/workflows/ci-python-zensical.yml)
-[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://denisecase.github.io/nlp-01-getting-started/)
+[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://ajaneh.github.io/nlp-01-getting-started-custom/)
 
 [![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
 [![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
@@ -14,20 +14,13 @@
 
 ## Project Overview
 
-Author: Denise Case
+Author: Alex Heyert
 
 Date: 2026 October
 
 First project in the Web Mining and Applied NLP course.
 
-Web Mining and Applied Natural Language Processing (NLP)
-focus on retrieving, processing, and analyzing text
-from the web and other digital sources.
 
-The goal is to establish a working Python environment,
-explore a professional project structure,
-run a Python text analysis script,
-and verify that the project works.
 
 The project is configured in
 [pyproject.toml](pyproject.toml).
@@ -42,8 +35,7 @@ for analysis.
 
 No local input dataset is required.
 
-The example uses the Wikipedia article on
-[Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing).
+The example uses the TODO:
 
 ## Approach
 
@@ -58,19 +50,7 @@ The example demonstrates:
 - Visualizing frequent words using Matplotlib.
 - Creating word clouds to explore vocabulary patterns.
 
-Explore these important project components:
-
-- [pyproject.toml](pyproject.toml) - project identity, dependencies, and tool configuration.
-- [src/nlp/web_words.py](src/nlp/web_words.py) - executable Python analysis.
-- [notebooks/web_words.ipynb](notebooks/web_words.ipynb) - interactive Jupyter notebook example.
-- [tests/](tests/) - automated tests.
-- [.github/workflows/](.github/workflows/) - automated testing and documentation deployment.
-- [docs/](docs/) - project documentation.
-- [zensical.toml](zensical.toml) - documentation configuration.
-
-The goal is to get the project running,
-inspect the results, and understand the basic workflow
-for acquiring and analyzing text.
+TODO:
 
 ## Run the Project
 
@@ -86,8 +66,6 @@ uv run python -m nlp.web_words
 Close each visualization window after viewing
 so the script can continue executing.
 
-The Jupyter notebook provides an additional
-interactive version of the analysis.
 
 ## Results
 
