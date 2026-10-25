@@ -19,9 +19,7 @@ Author: Alex Heyert
 Date: 2026 October
 
 First project in the Web Mining and Applied NLP course.
-
-
-
+Getting familiar with web scraping and beautiful soup.
 The project is configured in
 [pyproject.toml](pyproject.toml).
 
@@ -53,19 +51,7 @@ The example demonstrates:
 TODO:
 
 ## Run the Project
-
-Follow the [Professional Python Workflow Guide](https://denisecase.github.io/pro-analytics-02/)
-to set up your machine and project environment.
-
-From a VS Code terminal in the project root:
-
-```shell
-uv run python -m nlp.web_words
-```
-
-Close each visualization window after viewing
-so the script can continue executing.
-
+Go to the [Notebook](notebooks/web_words_heyert.ipynb) if you want to run it yourself!
 
 ## Results
 
@@ -100,7 +86,7 @@ uv run python -m pytest
 
 ## Project Documentation
 
-The [hosted documentation site](https://denisecase.github.io/nlp-01-getting-started/)
+The [hosted documentation site](https://ajaneh.github.io/nlp-01-getting-started-custom/)
 is published using Zensical and GitHub Pages.
 
 The documentation site is used to present the project report,
@@ -148,7 +134,8 @@ In the VS Code terminal,
 paste each command and hit Enter or Return after to run it.
 
 ```shell
-uv run prek install --force
+uv add prek --dev
+uv sync
 uv run prek update --freeze --cooldown-days 7
 
 git add -A
