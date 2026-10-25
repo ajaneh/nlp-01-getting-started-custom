@@ -1,79 +1,81 @@
-# Web Mining and Applied NLP Project Report
+# Comparing word frequency from different political parties
 
-Web Mining and Applied NLP | Project 01 | Example Report
-## Custom changes overview
-First I changed the source of the NLP to the Computational Chemistry page on wikipedia.
+Web Mining and Applied NLP | Project 01 | Alex Heyert | 10-2026
 
 ## Overview
 
-This project establishes a professional Python environment
-for acquiring and analyzing text from web pages.
+This project adapts a single-page web-text example into a small comparison of
+the 2024 Democratic and Republican party platforms. The
+[notebook](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words_heyert.ipynb) retrieves both documents,
+processes their text in parallel, and visualizes frequently used words.
 
-The objective is to demonstrate that a Python project can
-retrieve web content, extract text, compute word frequencies,
-and produce visualizations using a reproducible workflow.
+## Custom Project
 
-## Tools and Methods
+- Replaced the example webpage with the 2024 Republican and Democratic party
+  platform pages.
+- Applied the same retrieval, text extraction, and analysis steps to both
+  pages, keeping each result labeled by party.
+- Added separate word clouds and a bar chart comparison of the most frequent
+  words.
 
-The project uses:
+## Data
 
-- Python for text acquisition and analysis.
-- Requests for retrieving HTML from web pages.
-- BeautifulSoup for parsing HTML and extracting text.
-- Polars for computing word frequencies.
-- Matplotlib for frequency visualizations.
-- WordCloud for visual exploration of vocabulary.
-- Logging for execution records.
-- Ruff, ty, and pytest for code verification.
-- Zensical and GitHub Pages for published documentation.
+The notebook retrieves the platform pages from
+[The American Presidency Project](https://www.presidency.ucsb.edu/):
 
-The example script retrieves a Wikipedia article,
-extracts text, cleans words,
-and calculates token frequencies.
+- [2024 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform)
+- [2024 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform)
 
-The analysis produces a frequency bar chart
-and a word cloud.
+The pages are fetched when the notebook runs; no separate local text dataset
+is used. The fetched page content may change if the source website changes.
 
-## Verification
+## Method
 
-A successful execution displays:
+The notebook applies the following workflow to each page:
 
-    Pipeline executed successfully!
+1. **Retrieve the pages.** Requests downloads each URL with a user agent
+   header and a timeout. The notebook prints the HTTP response status and
+   raises an error for unsuccessful responses.
+2. **Extract text.** BeautifulSoup parses the HTML and python normal library combines
+   text with spaces and strips surrounding whitespace.
+3. **Clean tokens.** Text is split into words and lowercased. A custom set of
+   stop words removes common words and selected filler terms. Words of four
+   characters or fewer are excluded.
+4. **Count words.** Polars dataframes make the words easy to use and group.
+5. **Visualize.** Matplotlib displays the ten most frequent words for each
+   platform side by side. WordCloud creates a separate word cloud from each
+   platform's frequency table.
 
-The script records execution details in a project log.
+## Results and Interpretation
 
-These results demonstrate that the environment can
-retrieve, process, and visualize web text.
+The visualizations offer an exploratory view of vocabulary in the two
+documents:
 
-Automated tests provide additional verification
-of the project's expected behavior.
+![Republican platform word cloud](images/r_word_cloud.png)
 
-## Interpretation
+![Democratic platform word cloud](images/d_word_cloud.png)
 
-Web text contains both useful information and noise
-introduced by document structure and formatting.
+![Comparison of frequent words](images/comparison_bar_chart.png)
 
-Simple text cleaning and frequency analysis
-provide an initial view of a document's vocabulary.
+These are counts of cleaned words, not a measure of the importance or meaning
+of a policy. The cleaning choices affect which words appear and how often.
+Also the notebook extracts text from the full HTML page rather than selecting
+only the platform's article body, so page navigation or other surrounding
+elements may influence the counts. The democratic speech contained almost 3 times as many characters
 
-These techniques establish a foundation
-for later work involving text preprocessing,
-corpus exploration, and natural language processing.
+## Reproduce the Analysis
+
+Open and run the
+[project notebook](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words_heyert.ipynb).
 
 ## Documentation Index
 
-- **Home** - this landing page
-- [**Project Instructions**](project-instructions.md)
-- [**Glossary**](glossary.md)
+- [Project Instructions](project-instructions.md)
+- [Glossary](glossary.md)
 
 ## Project Links
 
 - [GitHub Repository](https://github.com/ajaneh/nlp-01-getting-started-custom)
-- [Example Script](https://github.com/denisecase/nlp-01-getting-started/blob/main/src/nlp/web_words.py)
-- [Example Notebook](https://github.com/denisecase/nlp-01-getting-started/blob/main/notebooks/web_words.ipynb)
-
-## Project Resources
-
-- [Project Instructions](project-instructions.md)
+- [Project Notebook](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words_heyert.ipynb)
 - [Professional Python Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Professional Python Project Explainer](https://pup-pack.github.io/professional-python-project-explainer/)

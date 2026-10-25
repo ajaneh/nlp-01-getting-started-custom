@@ -1,5 +1,5 @@
 
-# nlp-01-getting-started
+# nlp-01-getting-started-custom
 
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](pyproject.toml)
 [![CI](https://github.com/denisecase/nlp-01-getting-started/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/denisecase/nlp-01-getting-started/actions/workflows/ci-python-zensical.yml)
@@ -18,63 +18,50 @@ Author: Alex Heyert
 
 Date: 2026 October
 
-First project in the Web Mining and Applied NLP course.
-Getting familiar with web scraping and beautiful soup.
-The project is configured in
-[pyproject.toml](pyproject.toml).
+This is my customized first project for the Web Mining and Applied NLP course.
+It explores word frequencies in the 2024 Democratic and Republican party
+platforms, rather than analyzing a single example webpage.
 
 ## Data
 
-The example retrieves HTML from a public web page
-using the Requests library.
+The notebook retrieves the platform pages directly from
+[The American Presidency Project](https://www.presidency.ucsb.edu/):
 
-BeautifulSoup parses the HTML and extracts text
-for analysis.
+- [2024 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform)
+- [2024 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform)
 
-No local input dataset is required.
+The analysis uses the page content retrieved when the notebook is run; it does
+not require a separate local input dataset. The source note and links identify
+where the text comes from.
 
-The example uses the TODO:
+## What I Made My Own
+
+I adapted the project to compare two related documents and added visual
+summaries for each platform, along with a chart for comparing frequent words.
+The notebook contains the code and step-by-step implementation details.
 
 ## Approach
 
-The project uses Python to retrieve and analyze web text.
+The analysis follows the same broad workflow for each platform:
 
-The example demonstrates:
-
-- Retrieving HTML using HTTP requests.
-- Parsing HTML and extracting text with BeautifulSoup.
-- Cleaning and normalizing text.
-- Counting word frequencies using Polars.
-- Visualizing frequent words using Matplotlib.
-- Creating word clouds to explore vocabulary patterns.
-
-TODO:
+- Retrieve the page text and parse it.
+- Clean the text and count word frequencies.
+- Visualize frequent words in word clouds and a comparison chart.
 
 ## Run the Project
 Go to the [Notebook](notebooks/web_words_heyert.ipynb) if you want to run it yourself!
 
 ## Results
 
-The example retrieves web text,
-computes word frequencies,
-and displays a frequency bar chart and word cloud.
+The analysis produces a word cloud for each platform and a bar chart comparing
+frequent words. These visualizations provide an exploratory view of the words
+used in the two documents; word frequency alone does not explain their context.
 
-Successful execution produces:
+### Project Visualization
 
-```shell
-========================
-Pipeline executed successfully!
-========================
-```
-
-A `project.log` file is created in the project root.
-
-This confirms that the Python analysis executes
-and the logging system works.
-
-### Example Visualization
-
-![Word Cloud Example](docs/images/word_cloud_example.png)
+![Republican word cloud](docs/images/r_word_cloud.png)
+![Democratic word cloud](docs/images/d_word_cloud.png)
+![Comparison of frequent words](docs/images/comparison_bar_chart.png)
 
 ## Verification
 
