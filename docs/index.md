@@ -1,6 +1,8 @@
 # Web Mining and Applied NLP Project Report
 
 Web Mining and Applied NLP | Project 01 | Example Report
+## Custom changes overview
+First I changed the source of the NLP to the Computational Chemistry page on wikipedia.
 
 ## Overview
 
@@ -66,7 +68,7 @@ corpus exploration, and natural language processing.
 
 ## Project Links
 
-- [GitHub Repository](https://github.com/denisecase/nlp-01-getting-started)
+- [GitHub Repository](https://github.com/ajaneh/nlp-01-getting-started-custom)
 - [Example Script](https://github.com/denisecase/nlp-01-getting-started/blob/main/src/nlp/web_words.py)
 - [Example Notebook](https://github.com/denisecase/nlp-01-getting-started/blob/main/notebooks/web_words.ipynb)
 
