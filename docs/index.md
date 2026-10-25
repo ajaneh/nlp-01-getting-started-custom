@@ -31,7 +31,9 @@ platform-and-word pair in the frequency tables.
 ## Techniques Applied
 
 The project adapts the starter example's web-text workflow in
-[`notebooks/web_words_heyert.ipynb`](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words_heyert.ipynb):
+[`notebooks/web_words.ipynb`](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words.ipynb):
+The custom notebook is in
+[`notebooks/web_words_heyert.ipynb`](https://github.com/ajaneh/nlp-01-getting-started-custom/blob/main/notebooks/web_words_heyert.ipynb)
 
 - **HTTP retrieval — Requests:** fetches both platform pages with a User-Agent
   header and timeout.
@@ -52,7 +54,7 @@ to both, keeping the two results separate. I added separate word clouds and a
 bar chart comparison.
 
 - **Why I made this change:** I wanted to increase the complexity without adding new tools.
-- **Observed effect:** Despite adjusting which filler words to exclude a few times, some non specific words were common. When looking at the ranked bar chart comparing the top 20 frequencies it's interesting to see that "american" is the first most frequent word in the Republican platform but the 20th ranked on the Democratic platform.
+- **Observed effect:** Despite adjusting which filler words to exclude a few times, some non specific words were common. When looking at the ranked bar chart comparing the top 10 frequencies it's interesting to see that "american" is the first most frequent word in the Republican platform but the 10th ranked on the Democratic platform.
 
 ## Methods and Settings
 
